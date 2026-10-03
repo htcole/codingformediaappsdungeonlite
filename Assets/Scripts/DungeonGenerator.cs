@@ -32,9 +32,6 @@ public class DungeonGenerator : MonoBehaviour
         // 2. Spawn the initial Start Room
         Instantiate(startRoomPrefab, nextSpawnPos, Quaternion.identity);
         nextSpawnPos += new Vector3(0, 0, roomSize);
-
-        // 3. Spawn the very first danger room immediately so the game starts
-        SpawnNextRoomInSequence();
     }
 
     public void SpawnNextRoomInSequence()
