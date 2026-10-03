@@ -1319,7 +1319,7 @@ MonoBehaviour:
   safeRoomPrefab: {fileID: 1063911297576008930, guid: 79d3ef7ea9b3b0a409ff05d5cc5438d8, type: 3}
   bossRoomPrefab: {fileID: 1063911297576008930, guid: 5a4a24754f82f46479048292909090f8, type: 3}
   treasureRoomPrefab: {fileID: 1063911297576008930, guid: 6e382295d37acc34dba4e79a8e232e06, type: 3}
-  roomSize: 1
+  roomSize: 20
 --- !u!4 &1433909076
 Transform:
   m_ObjectHideFlags: 0

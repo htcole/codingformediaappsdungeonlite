@@ -31,11 +31,16 @@ public class DangerRoomSpawner : MonoBehaviour
         // 2. Increase hazard count as the level goes up (e.g., Level 1 = 1, Level 2 = 2, etc.)
         int hazardsToSpawn = baseHazardCount + (currentLevel - 1);
 
-        // 3. Spawn the calculated number of hazards
+       // Safety check: If spawnPoints is null or empty, fall back gracefully
+        if (spawnPoints == null || spawnPoints.Length == 0)
+        {
+            Debug.LogWarning("SpawnPoints array is unassigned on " + gameObject.name + "! Spawning at room center instead.");
+        }
+
         for (int i = 0; i < hazardsToSpawn; i++)
         {
-            // Pick a random spawn point if available, otherwise spawn at the room center
-            Transform spawnPoint = spawnPoints.Length > 0
+            // Pick a random spawn point if assigned and has items, otherwise spawn at room center (transform)
+            Transform spawnPoint = (spawnPoints != null && spawnPoints.Length > 0)
                 ? spawnPoints[Random.Range(0, spawnPoints.Length)]
                 : transform;
 

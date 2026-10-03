@@ -75,6 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4376793541021628029}
+  - component: {fileID: 1816372761918220721}
   m_Layer: 0
   m_Name: BossRoom
   m_TagString: Untagged
@@ -103,6 +104,24 @@ Transform:
   - {fileID: 5054717216695722448}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1816372761918220721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063911297576008930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28fd67f74b1a9b43ab52bba3b441837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DangerRoomSpawner
+  hazardPrefab: {fileID: 7593623250057746601}
+  spawnPoints:
+  - {fileID: 5054717216695722448}
+  baseHazardCount: 1
+  minSpeed: 2
+  maxSpeed: 5
 --- !u!1 &3029796450943814638
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,8 +263,8 @@ Transform:
   m_GameObject: {fileID: 5410149031652864179}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.869, y: 0.6399999, z: 0.083}
-  m_LocalScale: {x: 2.1259148, y: 1.30293, z: 0.2}
+  m_LocalPosition: {x: 0.869, y: 0.6399999, z: 0.018}
+  m_LocalScale: {x: 1.8742915, y: 1.30293, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4376793541021628029}
@@ -357,7 +376,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.871, y: 0.6399999, z: 0.082}
-  m_LocalScale: {x: 2.1247663, y: 1.30293, z: 0.21715501}
+  m_LocalScale: {x: 1.733618, y: 1.30293, z: 0.21715501}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4376793541021628029}
@@ -562,7 +581,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2243304024514956295, guid: d92c8cdfacc1bfb4188e91455e1ddf9c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.969
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 2243304024514956295, guid: d92c8cdfacc1bfb4188e91455e1ddf9c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -608,6 +627,14 @@ PrefabInstance:
       propertyPath: baseHazardCount
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3653469021402752771, guid: d92c8cdfacc1bfb4188e91455e1ddf9c, type: 3}
+      propertyPath: spawnPoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653469021402752771, guid: d92c8cdfacc1bfb4188e91455e1ddf9c, type: 3}
+      propertyPath: 'spawnPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5054717216695722448}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -616,5 +643,10 @@ PrefabInstance:
 --- !u!4 &5054717216695722448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2243304024514956295, guid: d92c8cdfacc1bfb4188e91455e1ddf9c, type: 3}
+  m_PrefabInstance: {fileID: 6414295307321355735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7593623250057746601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3487439244573472126, guid: d92c8cdfacc1bfb4188e91455e1ddf9c, type: 3}
   m_PrefabInstance: {fileID: 6414295307321355735}
   m_PrefabAsset: {fileID: 0}
