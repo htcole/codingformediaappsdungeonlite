@@ -119,8 +119,8 @@ MonoBehaviour:
   hazardPrefab: {fileID: 1063911297576008930, guid: b8d5ac30699f894458dcaaa968b11b34, type: 3}
   spawnPoints:
   - {fileID: 5054717216695722448}
-  baseHazardCount: 1
-  minSpeed: 2
+  baseHazardCount: 2
+  minSpeed: 3
   maxSpeed: 5
 --- !u!1 &3029796450943814638
 GameObject:
@@ -264,7 +264,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.9, y: 0.6, z: 0}
-  m_LocalScale: {x: 2, y: 1.3, z: 0.2}
+  m_LocalScale: {x: 1.9, y: 1.3, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4376793541021628029}
@@ -376,7 +376,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.9, y: 0.6, z: 0}
-  m_LocalScale: {x: 2, y: 1.3, z: 0.2}
+  m_LocalScale: {x: 1.9, y: 1.3, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4376793541021628029}
@@ -486,13 +486,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8857199047395015291}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4995263, y: 0.5004732, z: -0.49952644, w: 0.5004732}
-  m_LocalPosition: {x: -0.148, y: 1.34, z: 0.161}
-  m_LocalScale: {x: 2.2892272, y: 2.3508, z: 0.2}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 1.34, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4376793541021628029}
-  m_LocalEulerAnglesHint: {x: 89.892, y: 0, z: -89.892}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
 --- !u!33 &6726471385457993828
 MeshFilter:
   m_ObjectHideFlags: 0
