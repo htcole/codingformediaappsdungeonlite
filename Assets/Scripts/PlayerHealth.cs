@@ -5,9 +5,8 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Health Settings")]
     [Tooltip("The maximum health the player starts with.")]
-    public int maxHealth = 3;
-
-    private int currentHealth; // Tracks the player's health during gameplay
+    public int maxHealth = 10;
+    public int currentHealth; // Tracks the player's health during gameplay
 
     [Header("UI References")]
     [Tooltip("Drag the Game Over Panel UI object here in the Inspector.")]
@@ -30,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
     {
         // Subtract the damage amount from current health
         currentHealth -= amount;
+        Debug.Log("Player took damage! Current Health: " + currentHealth);
 
         // Check if health has dropped to zero or below
         if (currentHealth <= 0)
@@ -40,9 +40,12 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(int amount)
     {
-    currentHealth += amount;
-    currentHealth = Mathf.Min(currentHealth, maxHealth);
-    Debug.Log("Player healed! Current Health: " + currentHealth);
+        currentHealth += amount;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        Debug.Log("Player healed! Current Health: " + currentHealth);
     }
     // Handles what happens when the player dies
     void GameOver()
