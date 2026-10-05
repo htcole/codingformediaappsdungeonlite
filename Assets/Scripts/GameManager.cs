@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     [Header("Run Progression")]
     public int currentLevel = 1; // Increases every time you beat a boss/treasure room
     public int playerGold = 0;   // Currency carried across runs
+    public int extraMaxHealthPurchased = 0; // Purchased via health upgrade
+    public bool hasVampiricUpgrades = false; // Purchased via leech upgrade
+    public int vampiricHealAmount = 10;
 
     void Awake()
     {

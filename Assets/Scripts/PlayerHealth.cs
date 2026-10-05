@@ -5,7 +5,9 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Health Settings")]
     [Tooltip("The maximum health the player starts with.")]
-    public int maxHealth = 10;
+    public int baseMaxHealth = 10;
+    [HideInInspector]
+    public int maxHealth; // Calculated dynamically
     public int currentHealth; // Tracks the player's health during gameplay
 
     [Header("UI References")]
@@ -14,10 +16,16 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        // At the start of the game, set current health to maximum
+        // Calculate max health: Base health + any meta-upgrades bought in GameManager
+        maxHealth = baseMaxHealth;
+        if (GameManager.Instance != null)
+        {
+            maxHealth += GameManager.Instance.extraMaxHealthPurchased;
+        }
+
+        // Set current health to the new total max health on spawn
         currentHealth = maxHealth;
 
-        // Ensure the Game Over screen is hidden when the game begins
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(false);
@@ -38,14 +46,21 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void Heal(int amount)
+    // Heal by a percentage of max health (e.g., pass 0.25f for 25%)
+    public void HealPercent(float percentage)
     {
-        currentHealth += amount;
+        // Calculate the integer amount based on current max health
+        int healAmount = Mathf.RoundToInt(maxHealth * percentage);
+
+        currentHealth += healAmount;
+
+        // Clamp so it never exceeds maxHealth
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
         }
-        Debug.Log("Player healed! Current Health: " + currentHealth);
+
+        Debug.Log($"Healed by {percentage * 100}% ({healAmount} HP)! Current Health: {currentHealth}/{maxHealth}");
     }
     // Handles what happens when the player dies
     void GameOver()

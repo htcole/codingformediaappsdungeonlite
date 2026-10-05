@@ -16,7 +16,6 @@ public class HealthBarUI : MonoBehaviour
 
     IEnumerator FindPlayerRoutine()
     {
-        // Keep checking every frame until the player object with the tag "Player" exists
         while (playerHealth == null)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -24,12 +23,12 @@ public class HealthBarUI : MonoBehaviour
             {
                 playerHealth = player.GetComponent<PlayerHealth>();
             }
-            yield return null; // Wait for the next frame
+            yield return null;
         }
 
-        // Once found, initialize the slider values immediately
         if (healthSlider != null && playerHealth != null)
         {
+            // FORCE the slider's max to match the player's max health here
             healthSlider.maxValue = playerHealth.maxHealth;
             healthSlider.value = playerHealth.currentHealth;
         }

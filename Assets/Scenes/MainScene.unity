@@ -336,6 +336,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2886529903557104221, guid: d36abb3ba9a3b4c4fb42bc2012c4bf3e, type: 3}
   m_PrefabInstance: {fileID: 7590414935483352263}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &287064193 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2281516146762256612, guid: d36abb3ba9a3b4c4fb42bc2012c4bf3e, type: 3}
+  m_PrefabInstance: {fileID: 7590414935483352263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &287064202
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287064193}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &292882818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1437,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   currentLevel: 1
   playerGold: 0
+  extraMaxHealthPurchased: 0
+  hasVampiricUpgrades: 0
+  vampiricHealAmount: 10
 --- !u!4 &954030803
 Transform:
   m_ObjectHideFlags: 0
@@ -1770,7 +1805,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2281516146762256612, guid: d36abb3ba9a3b4c4fb42bc2012c4bf3e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 287064202}
   m_SourcePrefab: {fileID: 100100000, guid: d36abb3ba9a3b4c4fb42bc2012c4bf3e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

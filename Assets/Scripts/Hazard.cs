@@ -5,7 +5,7 @@ public class Hazard : MonoBehaviour
     [Header("Stats")]
     public float speed = 3f;
     public int damage = 1;
-    public int health = 1; // Added health so it can be destroyed by the player
+    public int health = 2; // Added health so it can be destroyed by the player
 
     [Header("Visual Feedback")]
     // Drag your HitSpark prefab here in the inspector
@@ -55,19 +55,35 @@ public class Hazard : MonoBehaviour
 
         if (health <= 0)
         {
-           // Instantiate the hit effect
+            // ---- VAMPIRIC LEECH UPGRADE CHECK ----
+            if (GameManager.Instance != null && GameManager.Instance.hasVampiricUpgrades)
+            {
+                GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+                if (playerObj != null)
+                {
+                    PlayerHealth playerHealth = playerObj.GetComponent<PlayerHealth>();
+                    if (playerHealth != null)
+                    {
+                        // Heal player using the value defined in GameManager
+                        playerHealth.HealPercent(GameManager.Instance.vampiricHealAmount);
+                        Debug.Log("Vampiric Leech triggered! Health stolen from enemy.");
+                    }
+                }
+            }
+            // --------------------------------------
+
+            // Visual Effect on Death
             if (hitEffectPrefab != null)
             {
                 Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
             }
-            // 2. Spawn the physical coin loot
+
+            // Spawn coin loot
             if (goldCoinPrefab != null)
             {
-                // Spawn it slightly above the ground
                 Vector3 spawnPos = transform.position + Vector3.up * 0.5f;
-                GameObject coin = Instantiate(goldCoinPrefab, spawnPos, Quaternion.Euler(90, 0, 0)); // Rotate upright if needed
+                GameObject coin = Instantiate(goldCoinPrefab, spawnPos, Quaternion.Euler(90, 0, 0));
 
-                // Add a little "pop" force upwards/outwards
                 Rigidbody rb = coin.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
@@ -75,9 +91,7 @@ public class Hazard : MonoBehaviour
                     rb.AddForce(randomForce, ForceMode.Impulse);
                 }
             }
-            // ----------------------------------
 
-            // Destroy the hazard
             Destroy(gameObject);
         }
     }

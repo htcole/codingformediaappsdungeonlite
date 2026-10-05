@@ -3,20 +3,20 @@ using UnityEngine;
 public class HealthPickup : MonoBehaviour
 {
     [Header("Pickup Settings")]
-    public int healAmount = 1;
+    [Range(0f, 1f)] // Creates a nice slider in the Inspector from 0.0 to 1.0 (0% to 100%)
+    public float healPercentage = 0.25f; // Default to 25%
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            // 1. Find the player's health component and heal them
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                playerHealth.Heal(healAmount);
+                // Call the percentage heal method
+                playerHealth.HealPercent(healPercentage);
             }
 
-            // 2. Destroy the pickup so it can't be used twice
             Destroy(gameObject);
         }
     }
