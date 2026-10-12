@@ -56,7 +56,7 @@ public class GoldCoinPickup : MonoBehaviour
         {
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.playerGold += goldValue;
+                GameManager.Instance.playerGold += goldValue * 10;
                 Debug.Log("Coin collected! Current Gold: " + GameManager.Instance.playerGold);
             }
 

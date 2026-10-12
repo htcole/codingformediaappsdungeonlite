@@ -9,6 +9,7 @@ public class DungeonGenerator : MonoBehaviour
     public GameObject safeRoomPrefab;
     public GameObject bossRoomPrefab;
     public GameObject treasureRoomPrefab;
+    public int health = 2;
 
     [Header("Generator Settings")]
     public float roomSize = 20f;
@@ -54,6 +55,8 @@ public class DungeonGenerator : MonoBehaviour
                 break;
             case RoomType.Treasure:
                 prefabToSpawn = treasureRoomPrefab;
+                health = health + 1;
+                Debug.Log($"Enemies health are now {health}");
                 break;
         }
 

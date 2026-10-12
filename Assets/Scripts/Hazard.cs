@@ -5,7 +5,8 @@ public class Hazard : MonoBehaviour
     [Header("Stats")]
     public float speed = 3f;
     public int damage = 1;
-    public int health = 2; // Added health so it can be destroyed by the player
+    public int health = 3; // Added health so it can be destroyed by the player
+
 
     [Header("Visual Feedback")]
     // Drag your HitSpark prefab here in the inspector
@@ -44,12 +45,14 @@ public class Hazard : MonoBehaviour
     public void TakeDamage(int amount)
     {
         health -= amount;
+        
 
         // ---- Visual Feedback on Hit ----
         // Instantiate the hit effect at our current position/rotation
         if (hitEffectPrefab != null)
         {
             Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
+            Debug.Log($"Enemy has {health} left");
         }
         // -------------------------------------
 

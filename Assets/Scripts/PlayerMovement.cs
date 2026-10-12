@@ -5,7 +5,7 @@ using UnityEngine.InputSystem; // Required for the new Input System
 public class SimplePlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float speed = 6f;
+    public float speed = 12f;
     private CharacterController controller;
 
     void Start()

@@ -4,12 +4,14 @@ using UnityEngine.InputSystem;
 
 public class UpgradeStation : MonoBehaviour
 {
-    public enum UpgradeType { MaxHealth, VampiricLeech }
+    public enum UpgradeType { MaxHealth, VampiricLeech, AttackPower, Speed}
 
     [Header("Shop Configuration")]
     public UpgradeType upgradeType;
     public int upgradeCost = 50;
     public string upgradeName = "Health Boost (+25 HP)";
+    public int damage = 1;
+    public float speed = 12f;
 
     [Header("Interaction Settings")]
     public float interactionDistance = 3.0f;
@@ -100,6 +102,23 @@ public class UpgradeStation : MonoBehaviour
                     Debug.Log("SUCCESS: Purchased Vampiric Leech! You now heal on hazard kills.");
                     Destroy(gameObject);
                     break;
+
+                case UpgradeType.AttackPower:
+                    GameManager.Instance.playerGold -= upgradeCost;
+                    GameManager.Instance.ExtraAttackPower += 1;
+                    damage = damage + 1;
+                    Debug.Log($"SUCCESS: Purchased Extra Attack! New Total Max: {GameManager.Instance.ExtraAttackPower + 1}");
+                    Destroy(gameObject);
+                    break;
+
+                case UpgradeType.Speed:
+                    GameManager.Instance.playerGold -= upgradeCost;
+                    GameManager.Instance.Speed += 2f;
+                    speed = speed + 2f;
+                    Debug.Log($"SUCCESS: Purchased Extra Speed! New Total Max: {GameManager.Instance.Speed + 1}");
+                    Destroy(gameObject);
+                    break;
+
             }
         }
         else
