@@ -17,7 +17,7 @@ public class SimplePlayerMovement : MonoBehaviour
     {
         // Ensure a keyboard is connected
         if (Keyboard.current == null) return;
-
+        
         float moveX = 0f;
         float moveZ = 0f;
 
@@ -31,6 +31,6 @@ public class SimplePlayerMovement : MonoBehaviour
         Vector3 move = new Vector3(moveX, 0, moveZ).normalized;
 
         // Move the player
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * (speed + GameManager.Instance.extraSpeedPurchased) * Time.deltaTime);
     }
 }

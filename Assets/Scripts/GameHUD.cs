@@ -5,6 +5,7 @@ public class GameHUD : MonoBehaviour
 {
     [Header("UI References")]
     public TextMeshProUGUI goldText;
+    public TextMeshProUGUI speedText;
 
     void Update()
     {
@@ -12,6 +13,7 @@ public class GameHUD : MonoBehaviour
         if (GameManager.Instance != null && goldText != null)
         {
             goldText.text = "Gold: " + GameManager.Instance.playerGold;
+            speedText.text = "Speed: " + (GameManager.Instance.extraSpeedPurchased + 6);
         }
     }
 }
