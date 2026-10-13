@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class UpgradeStation : MonoBehaviour
 {
-    public enum UpgradeType { MaxHealth, VampiricLeech }
+    public enum UpgradeType { MaxHealth, VampiricLeech, Speed }
 
     [Header("Shop Configuration")]
     public UpgradeType upgradeType;
@@ -70,6 +70,7 @@ public class UpgradeStation : MonoBehaviour
         if (GameManager.Instance.playerGold >= upgradeCost)
         {
             PlayerHealth playerHealth = playerTransform != null ? playerTransform.GetComponent<PlayerHealth>() : null;
+            SimplePlayerMovement simplePlayerMovement = playerTransform != null ? playerTransform.GetComponent<SimplePlayerMovement>() : null;
 
             switch (upgradeType)
             {
@@ -98,6 +99,16 @@ public class UpgradeStation : MonoBehaviour
                     GameManager.Instance.playerGold -= upgradeCost;
                     GameManager.Instance.hasVampiricUpgrades = true;
                     Debug.Log("SUCCESS: Purchased Vampiric Leech! You now heal on hazard kills.");
+                    Destroy(gameObject);
+                    break;
+
+                case UpgradeType.Speed:
+                    GameManager.Instance.playerGold -= upgradeCost;
+                    GameManager.Instance.extraSpeedPurchased += 1;
+
+                    simplePlayerMovement.speed += 1;
+
+                    Debug.Log($"SUCCESS: Purchased Speed! New Total Max: {GameManager.Instance.extraSpeedPurchased + 6}");
                     Destroy(gameObject);
                     break;
             }
