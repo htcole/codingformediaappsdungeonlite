@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class UpgradeStation : MonoBehaviour
 {
-    public enum UpgradeType { MaxHealth, VampiricLeech }
+    public enum UpgradeType { MaxHealth, VampiricLeech, MaxSpeed }
 
     [Header("Shop Configuration")]
     public UpgradeType upgradeType;
@@ -98,6 +98,16 @@ public class UpgradeStation : MonoBehaviour
                     GameManager.Instance.playerGold -= upgradeCost;
                     GameManager.Instance.hasVampiricUpgrades = true;
                     Debug.Log("SUCCESS: Purchased Vampiric Leech! You now heal on hazard kills.");
+                    Destroy(gameObject);
+                    break;
+
+                    // Exercise 6 Addition, Adding Speed Upgrade In Room
+                case UpgradeType.MaxSpeed:
+                    GameManager.Instance.playerGold -= upgradeCost;
+                    GameManager.Instance.extraMoveSpeed += 1f; // Safely stored in persistent GameManager
+
+                    
+                    Debug.Log("SUCCESS: Purchased Max Speed! You now run with additional speed.");
                     Destroy(gameObject);
                     break;
             }
