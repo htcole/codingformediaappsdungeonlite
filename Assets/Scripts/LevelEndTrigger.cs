@@ -4,12 +4,18 @@ using UnityEngine.SceneManagement;
 public class TreasureRoomTrigger : MonoBehaviour
 {
     private bool triggered = false;
+    private PlayerHealth playerHealth;
 
     private void OnTriggerEnter(Collider other)
     {
         if (!triggered && other.CompareTag("Player"))
         {
             triggered = true;
+
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            playerHealth = player.GetComponent<PlayerHealth>();
+
+            GameManager.Instance.currentHealthBeforeNextLevel = playerHealth.currentHealth;
 
             // 1. Increase the level count in your persistent GameManager
             if (GameManager.Instance != null)

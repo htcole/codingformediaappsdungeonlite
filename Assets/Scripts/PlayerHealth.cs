@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         // Set current health to the new total max health on spawn
-        currentHealth = maxHealth;
+        currentHealth = GameManager.Instance.currentHealthBeforeNextLevel;
 
         if (gameOverPanel != null)
         {
