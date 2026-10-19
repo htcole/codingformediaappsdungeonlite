@@ -172,13 +172,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465726793954854800}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08976996, y: 0.015310049, z: 0.49163997}
+  m_LocalRotation: {x: -0, y: -0, z: 0.25125933, w: 0.9679198}
+  m_LocalPosition: {x: -0.08976996, y: 0.015310049, z: 0.4916399}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8312866601236654388}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 29.104}
 --- !u!33 &5006148128781522187
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -272,6 +272,7 @@ MonoBehaviour:
   upgradeType: 1
   upgradeCost: 200
   upgradeName: Vampiric Leech (steal enemy health)
+  interactionDistance: 3
 --- !u!1 &1063911297576008930
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +440,7 @@ MonoBehaviour:
   upgradeType: 0
   upgradeCost: 50
   upgradeName: Health Boost (+25 HP)
+  interactionDistance: 3
 --- !u!1 &2361698528554990955
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +469,7 @@ Transform:
   m_GameObject: {fileID: 2361698528554990955}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1, y: 0.6, z: 0}
+  m_LocalPosition: {x: 1, y: 0.639, z: 0}
   m_LocalScale: {x: 2, y: 1.3, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -578,13 +580,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4709527803329577314}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: -0.02}
+  m_LocalRotation: {x: -0, y: 0.05370641, z: -0, w: 0.99855685}
+  m_LocalPosition: {x: -0.0000000021685709, y: 0, z: -0.02}
   m_LocalScale: {x: 0.2, y: 0.3, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4376793541021628029}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 6.157, z: 0}
 --- !u!33 &4665733439281649852
 MeshFilter:
   m_ObjectHideFlags: 0
