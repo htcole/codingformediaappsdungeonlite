@@ -22,12 +22,41 @@ public class DungeonGenerator : MonoBehaviour
     void Start()
     {
         // 1. Build the exact sequence you want for this level loop
-        roomQueue.Enqueue(RoomType.Danger);
-        roomQueue.Enqueue(RoomType.Safe);
-        roomQueue.Enqueue(RoomType.Danger);
-        roomQueue.Enqueue(RoomType.Safe);
-        roomQueue.Enqueue(RoomType.Boss);
-        roomQueue.Enqueue(RoomType.Treasure);
+        // Exercise 7 Additions
+        // Makes rooms more difficult as levels progress.
+        if (GameManager.Instance.currentLevel < 3)
+        {
+            roomQueue.Enqueue(RoomType.Danger);
+            roomQueue.Enqueue(RoomType.Safe);
+            roomQueue.Enqueue(RoomType.Danger);
+            roomQueue.Enqueue(RoomType.Safe);
+            roomQueue.Enqueue(RoomType.Boss);
+            roomQueue.Enqueue(RoomType.Treasure);
+        }
+
+        if(GameManager.Instance.currentLevel >= 3 && GameManager.Instance.currentLevel < 6)
+        {
+            roomQueue.Enqueue(RoomType.Danger);
+            roomQueue.Enqueue(RoomType.Danger);
+            roomQueue.Enqueue(RoomType.Safe);
+            roomQueue.Enqueue(RoomType.Danger);
+            roomQueue.Enqueue(RoomType.Danger);
+            roomQueue.Enqueue(RoomType.Boss);
+            roomQueue.Enqueue(RoomType.Treasure);
+        }
+
+        if(GameManager.Instance.currentLevel >= 6)
+        {
+            roomQueue.Enqueue(RoomType.Danger);
+            roomQueue.Enqueue(RoomType.Danger);
+            roomQueue.Enqueue(RoomType.Danger);
+            roomQueue.Enqueue(RoomType.Boss); 
+            roomQueue.Enqueue(RoomType.Danger);
+            roomQueue.Enqueue(RoomType.Danger);
+            roomQueue.Enqueue(RoomType.Safe);
+            roomQueue.Enqueue(RoomType.Boss);
+            roomQueue.Enqueue(RoomType.Treasure);
+        }
 
         // 2. Spawn the initial Start Room
         Instantiate(startRoomPrefab, nextSpawnPos, Quaternion.identity);

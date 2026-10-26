@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     public int playerGold = 0;   // Currency carried across runs
     public int extraMaxHealthPurchased = 0; // Purchased via health upgrade
     public bool hasVampiricUpgrades = false; // Purchased via leech upgrade
-    public int vampiricHealAmount = 10;
+    public int vampiricHealAmount = 4;
+
+    // Exercise 6 Addition, adds the extra speed
+    public float extraMoveSpeed = 1f; // Purchased via speed upgrade
 
     void Awake()
     {

@@ -31,6 +31,10 @@ public class SimplePlayerMovement : MonoBehaviour
         Vector3 move = new Vector3(moveX, 0, moveZ).normalized;
 
         // Move the player
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * (speed + GameManager.Instance.extraMoveSpeed) * Time.deltaTime);
+
+
+        // Change rotation of player based on the Vector3
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(move, Vector3.up), 720f * Time.deltaTime);
     }
 }
