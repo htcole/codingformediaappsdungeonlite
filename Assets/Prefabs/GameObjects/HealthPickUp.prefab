@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f9228acac5449259e7a342fb71151c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthPickup
-  healAmount: 1
+  healPercentage: 0.25
 --- !u!65 &150009196897916976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 0.49999988}
+  m_LocalScale: {x: 0.17477053, y: 1.0322448, z: 0.21801996}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6965366058094997111}
@@ -186,7 +186,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.40929, y: 0.47271794, z: 0.39298}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6965366058094997111}
