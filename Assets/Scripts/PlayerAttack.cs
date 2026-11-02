@@ -20,7 +20,7 @@ public class PlayerAttack : MonoBehaviour
     void InteractWithNearbyHazards()
     {
         // Find all colliders within the interaction range
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, interactionRange);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, interactionRange + GameManager.Instance.extraWeaponRangePurchased);
 
         foreach (Collider hitCollider in hitColliders)
         {
@@ -29,7 +29,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 // Deal damage to the hazard when 'E' is pressed nearby
                 hazard.TakeDamage(1);
-                
+
                 // Optional: break after hitting one target per keypress, or hit all in range
                 break; 
             }
@@ -40,6 +40,6 @@ public class PlayerAttack : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, interactionRange);
+        Gizmos.DrawWireSphere(transform.position, interactionRange + GameManager.Instance.extraWeaponRangePurchased);
     }
 }

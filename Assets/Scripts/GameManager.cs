@@ -10,7 +10,12 @@ public class GameManager : MonoBehaviour
     public int playerGold = 0;   // Currency carried across runs
     public int extraMaxHealthPurchased = 0; // Purchased via health upgrade
     public bool hasVampiricUpgrades = false; // Purchased via leech upgrade
-    public int vampiricHealAmount = 10;
+    public int extraSpeedPurchased = 0;
+    public float extraWeaponRangePurchased = 0f;
+    public int additionalUpgradeCost = 0;
+    public int vampiricHealAmount = 1;
+    public int currentHealthBeforeNextLevel = 10; // Saves player health so you don't get a full heal at the start of each level
+    public string info = "";
 
     void Awake()
     {
@@ -30,5 +35,13 @@ public class GameManager : MonoBehaviour
     public void ResetRun()
     {
         currentLevel = 1;
+        playerGold = 0;
+        extraMaxHealthPurchased = 0;
+        extraWeaponRangePurchased = 0f;
+        hasVampiricUpgrades = false;
+        extraSpeedPurchased = 0;
+        additionalUpgradeCost = 0;
+        currentHealthBeforeNextLevel = 10;
+        info = "";
     }
 }

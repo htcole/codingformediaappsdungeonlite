@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
         }
 
         // Set current health to the new total max health on spawn
-        currentHealth = maxHealth;
+        currentHealth = GameManager.Instance.currentHealthBeforeNextLevel;
 
         if (gameOverPanel != null)
         {
@@ -47,12 +47,12 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Heal by a percentage of max health (e.g., pass 0.25f for 25%)
-    public void HealPercent(float percentage)
+    public void HealPercent(int number) // change health from float (%) to int
     {
         // Calculate the integer amount based on current max health
-        int healAmount = Mathf.RoundToInt(maxHealth * percentage);
+        // int healAmount = Mathf.RoundToInt(maxHealth * percentage);
 
-        currentHealth += healAmount;
+        currentHealth += number;
 
         // Clamp so it never exceeds maxHealth
         if (currentHealth > maxHealth)
@@ -60,7 +60,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
 
-        Debug.Log($"Healed by {percentage * 100}% ({healAmount} HP)! Current Health: {currentHealth}/{maxHealth}");
+        Debug.Log($"Healed by +{number} ({number} HP)! Current Health: {currentHealth}/{maxHealth}");
     }
     // Handles what happens when the player dies
     void GameOver()
@@ -71,6 +71,7 @@ public class PlayerHealth : MonoBehaviour
             gameOverPanel.SetActive(true);
         }
 
+        GameManager.Instance.ResetRun();
         // Pause the game time so enemies and traps stop moving
         Time.timeScale = 0f;
     }

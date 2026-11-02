@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f9228acac5449259e7a342fb71151c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthPickup
-  healAmount: 1
+  healPercentage: 0.1
 --- !u!65 &150009196897916976
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -61,6 +61,7 @@ public class DungeonGenerator : MonoBehaviour
         {
             Instantiate(prefabToSpawn, nextSpawnPos, Quaternion.identity);
             nextSpawnPos += new Vector3(0, 0, roomSize);
+            GameManager.Instance.info = "";
         }
     }
 }
