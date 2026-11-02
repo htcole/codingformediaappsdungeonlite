@@ -9,10 +9,13 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Yellow
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 2100000, guid: 9bd0597a36699994996074fb9c6c15cd, type: 2}
+  m_Parent: {fileID: 2100000, guid: 385f928c3ac9e0d47a958de936180548, type: 2}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_ValidKeywords:
+  - _NORMALMAP
+  - _OCCLUSIONMAP
+  m_InvalidKeywords:
+  - _GLOSSYREFLECTIONS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -24,12 +27,31 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 417ea75edf30344b0b92655f0be7723f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 126ea946c1feb468fac6d793dd5e20f3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 417ea75edf30344b0b92655f0be7723f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: 35e39f68c573f495490022b7955c59ec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _BumpScale: 2
+    - _Metallic: 1
+    - _OcclusionStrength: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.9462535, b: 0, a: 1}
-    - _Color: {r: 1, g: 0.9462535, b: 0, a: 1}
+    - _BaseColor: {r: 0.79592645, g: 1, b: 0, a: 1}
+    - _Color: {r: 0.79592645, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3745098286321454019

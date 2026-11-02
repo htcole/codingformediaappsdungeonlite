@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: e80ef7abdd4db254387a70a941cb8ca0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - startRoomPrefab: {fileID: 1063911297576008930, guid: 3608a81938f350d4599e4f69dc2a1acd, type: 3}
+  - safeRoomPrefab: {fileID: 1063911297576008930, guid: 79d3ef7ea9b3b0a409ff05d5cc5438d8, type: 3}
+  - bossRoomPrefab: {fileID: 1063911297576008930, guid: 5a4a24754f82f46479048292909090f8, type: 3}
+  - treasureRoomPrefab: {fileID: 1063911297576008930, guid: 6e382295d37acc34dba4e79a8e232e06, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
