@@ -1,0 +1,14 @@
+﻿[
+  {
+    "id": "project_root",
+    "type": "project",
+    "name": "CodingforMediaAppRogueDungeon",
+    "unity_version": "6000.3.25f1",
+    "description": "Central project node for CodingforMediaAppRogueDungeon. Connects to all scenes, asset types, and tool categories.",
+    "scene_count": 16,
+    "asset_count": 17935,
+    "tool_count": 0,
+    "asset_type_count": 45,
+    "tool_category_count": 0
+  }
+]

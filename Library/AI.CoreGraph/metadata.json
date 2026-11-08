@@ -1,0 +1,22 @@
+﻿{
+  "total_scenes": 16,
+  "total_assets": 17935,
+  "total_tools": 0,
+  "total_asset_types": 45,
+  "total_tool_categories": 0,
+  "total_projects": 1,
+  "total_scene_directlyDependsOn_asset_edges": 256,
+  "total_asset_directlyDependsOn_asset_edges": 5099,
+  "total_asset_directlyReferencedBy_scene_edges": 256,
+  "total_assetType_includes_asset_edges": 17951,
+  "total_toolCategory_includes_tool_edges": 0,
+  "total_project_canUse_toolCategory_edges": 0,
+  "total_project_has_scene_edges": 16,
+  "total_project_contains_assetType_edges": 45,
+  "total_asset_inheritsFrom_asset_edges": 2632,
+  "total_asset_implements_asset_edges": 1665,
+  "total_asset_declares_asset_edges": 12511,
+  "total_asset_uses_asset_edges": 37480,
+  "project_name": "CodingforMediaAppRogueDungeon",
+  "unity_version": "6000.3.25f1"
+}

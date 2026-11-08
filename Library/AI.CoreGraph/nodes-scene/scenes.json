@@ -1,0 +1,114 @@
+﻿[
+  {
+    "id": "scene_Assets__Recovery_0_(1)_unity",
+    "type": "scene",
+    "path": "Assets/_Recovery/0 (1).unity",
+    "name": "0 (1)",
+    "direct_dependencies_count": 23
+  },
+  {
+    "id": "scene_Assets__Recovery_0_unity",
+    "type": "scene",
+    "path": "Assets/_Recovery/0.unity",
+    "name": "0",
+    "direct_dependencies_count": 23
+  },
+  {
+    "id": "scene_Assets_Animated_Fantasy_Polygon_Chest_Scenes_Fantasy_Polygon_Chest_unity",
+    "type": "scene",
+    "path": "Assets/Animated Fantasy Polygon Chest/Scenes/Fantasy Polygon Chest.unity",
+    "name": "Fantasy Polygon Chest",
+    "direct_dependencies_count": 4
+  },
+  {
+    "id": "scene_Assets_ChestDF_Demo_unity",
+    "type": "scene",
+    "path": "Assets/ChestDF/Demo.unity",
+    "name": "Demo",
+    "direct_dependencies_count": 4
+  },
+  {
+    "id": "scene_Assets_DungeonModularPack_Scenes_DemoScene_unity",
+    "type": "scene",
+    "path": "Assets/DungeonModularPack/Scenes/DemoScene.unity",
+    "name": "DemoScene",
+    "direct_dependencies_count": 16
+  },
+  {
+    "id": "scene_Assets_DungeonModularPack_Scenes_SampleScene_unity",
+    "type": "scene",
+    "path": "Assets/DungeonModularPack/Scenes/SampleScene.unity",
+    "name": "SampleScene",
+    "direct_dependencies_count": 15
+  },
+  {
+    "id": "scene_Assets_Gridness_Studios_Elementary_Dungeon_Pack_Lite_Demo_Scene_DungeonLiteScene_FPS_unity",
+    "type": "scene",
+    "path": "Assets/Gridness Studios/Elementary Dungeon Pack Lite/Demo Scene/DungeonLiteScene-FPS.unity",
+    "name": "DungeonLiteScene-FPS",
+    "direct_dependencies_count": 28
+  },
+  {
+    "id": "scene_Assets_Gridness_Studios_Elementary_Dungeon_Pack_Lite_Demo_Scene_DungeonLiteScene_TopDown_unity",
+    "type": "scene",
+    "path": "Assets/Gridness Studios/Elementary Dungeon Pack Lite/Demo Scene/DungeonLiteScene-TopDown.unity",
+    "name": "DungeonLiteScene-TopDown",
+    "direct_dependencies_count": 27
+  },
+  {
+    "id": "scene_Assets_Gridness_Studios_Elementary_Dungeon_Pack_Lite_Scenes_DungeonPackLiteCollection_unity",
+    "type": "scene",
+    "path": "Assets/Gridness Studios/Elementary Dungeon Pack Lite/Scenes/DungeonPackLiteCollection.unity",
+    "name": "DungeonPackLiteCollection",
+    "direct_dependencies_count": 29
+  },
+  {
+    "id": "scene_Assets_PolyKebap_Potions_DemoScene_unity",
+    "type": "scene",
+    "path": "Assets/PolyKebap/Potions/DemoScene.unity",
+    "name": "DemoScene",
+    "direct_dependencies_count": 10
+  },
+  {
+    "id": "scene_Assets_Scenes_MainScene_unity",
+    "type": "scene",
+    "path": "Assets/Scenes/MainScene.unity",
+    "name": "MainScene",
+    "direct_dependencies_count": 30
+  },
+  {
+    "id": "scene_Assets_StylizedHandPaintedDungeon(Free)_Demo_Assets_Preview_Assets_Preview_unity",
+    "type": "scene",
+    "path": "Assets/StylizedHandPaintedDungeon(Free)/Demo/Assets_Preview/Assets_Preview.unity",
+    "name": "Assets_Preview",
+    "direct_dependencies_count": 7
+  },
+  {
+    "id": "scene_Assets_StylizedHandPaintedDungeon(Free)_Demo_Demo_Scene_Demo_Scene_unity",
+    "type": "scene",
+    "path": "Assets/StylizedHandPaintedDungeon(Free)/Demo/Demo_Scene/Demo_Scene.unity",
+    "name": "Demo_Scene",
+    "direct_dependencies_count": 7
+  },
+  {
+    "id": "scene_Packages_com_unity_render_pipelines_universal_Editor_SceneTemplates_Basic_unity",
+    "type": "scene",
+    "path": "Packages/com.unity.render-pipelines.universal/Editor/SceneTemplates/Basic.unity",
+    "name": "Basic",
+    "direct_dependencies_count": 2
+  },
+  {
+    "id": "scene_Packages_com_unity_render_pipelines_universal_Editor_SceneTemplates_Indoors_unity",
+    "type": "scene",
+    "path": "Packages/com.unity.render-pipelines.universal/Editor/SceneTemplates/Indoors.unity",
+    "name": "Indoors",
+    "direct_dependencies_count": 19
+  },
+  {
+    "id": "scene_Packages_com_unity_render_pipelines_universal_Editor_SceneTemplates_Standard_unity",
+    "type": "scene",
+    "path": "Packages/com.unity.render-pipelines.universal/Editor/SceneTemplates/Standard.unity",
+    "name": "Standard",
+    "direct_dependencies_count": 12
+  }
+]

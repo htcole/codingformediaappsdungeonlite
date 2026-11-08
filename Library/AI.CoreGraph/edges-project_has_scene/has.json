@@ -1,0 +1,114 @@
+﻿[
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets__Recovery_0_(1)_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets__Recovery_0_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets_Animated_Fantasy_Polygon_Chest_Scenes_Fantasy_Polygon_Chest_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets_ChestDF_Demo_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets_DungeonModularPack_Scenes_DemoScene_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets_DungeonModularPack_Scenes_SampleScene_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets_Gridness_Studios_Elementary_Dungeon_Pack_Lite_Demo_Scene_DungeonLiteScene_FPS_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets_Gridness_Studios_Elementary_Dungeon_Pack_Lite_Demo_Scene_DungeonLiteScene_TopDown_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets_Gridness_Studios_Elementary_Dungeon_Pack_Lite_Scenes_DungeonPackLiteCollection_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets_PolyKebap_Potions_DemoScene_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets_Scenes_MainScene_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets_StylizedHandPaintedDungeon(Free)_Demo_Assets_Preview_Assets_Preview_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Assets_StylizedHandPaintedDungeon(Free)_Demo_Demo_Scene_Demo_Scene_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Packages_com_unity_render_pipelines_universal_Editor_SceneTemplates_Basic_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Packages_com_unity_render_pipelines_universal_Editor_SceneTemplates_Indoors_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  },
+  {
+    "src_id": "project_root",
+    "dst_id": "scene_Packages_com_unity_render_pipelines_universal_Editor_SceneTemplates_Standard_unity",
+    "relation_type": "has",
+    "src_type": "project",
+    "dst_type": "scene"
+  }
+]
